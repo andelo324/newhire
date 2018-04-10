@@ -2,28 +2,31 @@
 <html>
 <head>
 	<title>Rubies New Hire Form</title>
+	<link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
 <body>
-<h1>New Hire Form</h1>
 
+<div id="header"><span id="firstWord">Rubies New</span><span id="secondWord"> Hire Form</span><img src=img/index_logo.png width="35px" height="40px"><hr /></div>
+<br>
 <form>
-	<div>
+	<div class="listings">
 		<label for="fName"><strong>First Name</strong></label>
 		<input name="firstName" id="fName" type="text" required>
 		<label for="fName"><strong>Last Name<strong></label>
 		<input name="LastName" id="lName" type="text" required>
 	</div>
 	<br>
-	<div>
+	<div class="listings">
 		<label for="sDate"><strong>Start Date</strong></label>
 		<input id="sDate" type="date" required>
+		<label class="req"> *</label>
 	</div>
 	<br>
 	<!-- <div>
 		<label for="supervisor"><strongReports To:</label>
 		<input name="supervisor" id="supervisor" type="text">
 	</div> -->
-	<div>
+	<div class="listings">
 		<label><strong>Location: </strong></label>
 		<!-- <label for"location>Rubies Plaza</label>
 		<input id="location" type="radio" value="120" required>
@@ -44,23 +47,25 @@
 			<option value="sd">San Diego</option>
 			<option value="char">Charades</option>
 		</select>
+		<label class="req"> *</label>
 	</div>
 	<br>
-	<div>
-		<label for="dept">Dept:</label>
+	<div class="listings">
+		<label for="dept"><strong>Dept:</strong></label>
 		<input id="dept" type="text">
 	</div>
 	<br>
-	<div>
-		<label>Simparel Access:</label>
+	<div class="listings">
+		<label><strong>Simparel Access:</strong></label>
 		<label for="simpNeeded">Yes</label>
 		<input name ="checksimp" id="simpNeeded" type="radio" required value="yesSimp">
 		<label for="simpNeeded">No</label>
 		<input name="checksimp" id="simpNeeded" type="radio" value="noSimp">
+		<label class="req">  *</label>
 	</div>
 	<br>
-	<div>
-		<label>Simparel Companies:</label> 
+	<div class="listings">
+		<label><strong>Simparel Companies:</strong></label> 
 		<label for="SimpRub">Rubies US</label>
 		<input id="SimpRub" type="checkbox">
 		<label for="SimpREL">Rubies REL</label>
@@ -75,23 +80,26 @@
 		<input id="SimpCAN" type="checkbox">
 	</div>	
 	<br>
-	<div>
-		<label>Irms Access:</label>
+	<div class="listings">
+		<label><strong>Irms Access:</strong></label>
 		<label for="irmsNeeded">Yes</label>
 		<input name ="checkirms" id="irmsNeeded" type="radio" required value="yesIrms">
 		<label for="irmsNeeded">No</label>
 		<input name="checkirms" id="irmsNeeded" type="radio" value="noIrms">
-	<div>
+		<label class="req"> *</label>
+	</div>
 	<br>
-		<label>Sendsuite Access:</label>
+	<div class="listings">
+	
+		<label><strong>Sendsuite Access:</strong></label>
 		<label for="pitneyNeeded">Yes</label>
 		<input name ="checkpitney" id="pitneyNeeded" type="radio" required value="pitneyIrms">
 		<label for="pitneyNeeded">No</label>
 		<input name="checkpitney" id="pitneyNeeded" type="radio" value="pitneyIrms">
-	<br>
+		<label class="req"> *</label>
 	</div>
 	<br>
-	<div>
+	<div class="listings">
 		<textarea name="comments" rows="10" cols="50">Additional Notes/Requests</textarea>
 	</div>
 </form>

@@ -1,0 +1,65 @@
+/* basic elements */
+html {
+	margin: 0;
+	padding: 0;
+	}
+body { 
+	font: 75% georgia, sans-serif;
+	line-height: 1.88889;
+	color: #555753; 
+	/*background: #fff url(http://csszengarden.com/001/blossoms.jpg) no-repeat bottom right; */
+	background: url(../img/grey_bg.jpg);
+	margin: 0; 
+	padding: 0;
+	margin-left: 10px;
+	}
+p { 
+	margin-top: 0; 
+	text-align: justify;
+	}
+
+h1 { 
+	font: 30px georgia, sans-serif;
+	letter-spacing: 1px; 
+	margin-bottom: 0; 
+	color: #7D775C;
+	}
+a:link { 
+	font-weight: bold; 
+	text-decoration: none; 
+	color: #B7A5DF;
+	}
+a:visited { 
+	font-weight: bold; 
+	text-decoration: none; 
+	color: #D4CDDC;
+	}
+a:hover, a:focus, a:active { 
+	text-decoration: underline; 
+	color: #9685BA;
+	}
+abbr {
+	border-bottom: none;
+	}
+#firstWord{
+	color: #bb0000;
+	font-size: 36pt;
+}
+
+#secondWord {
+	color: red;
+	font-size: 36pt;
+}
+
+
+
+	/* Special listings */
+
+.listings{
+	font: 14px verdana, sans-serif;
+}
+
+.req {
+	font: 14px verdana, sans-serif;
+	color: red;
+}
