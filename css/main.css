@@ -52,6 +52,7 @@ abbr {
 
 
 
+
 	/* Special listings */
 
 .listings{
@@ -61,4 +62,11 @@ abbr {
 .req {
 	font: 14px verdana, sans-serif;
 	color: red;
+}
+
+.name{
+	display:inline-block;
+}
+.nameInput{
+	display:block;
 }

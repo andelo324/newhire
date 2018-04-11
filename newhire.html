@@ -20,9 +20,9 @@ function toggleField(hideObj,showObj){
 <form name="newHire" action="#">
 	<div class="listings">
 		<label for="fName"><strong>First Name</strong></label>
-		<input name="firstName" id="fName" type="text" required autocomplete="off">
-		<label for="fName"><strong>Last Name<strong></label>
-		<input name="LastName" id="lName" type="text" required autocomplete="off">
+			<input name="firstName" id="fName" type="text" required autocomplete="off">
+		<label for="fName"><strong>Last Name</strong></label>
+			<input name="LastName" id="lName" type="text" required autocomplete="off">
 	</div>
 	<br>
 	<div class="listings">
@@ -31,16 +31,10 @@ function toggleField(hideObj,showObj){
 		<label class="req"> *</label>
 	</div>
 	<br>
-	<!-- <div>
-		<label for="supervisor"><strongReports To:</label>
-		<input name="supervisor" id="supervisor" type="text">
-	</div> -->
+	
 	<div class="listings">
 		<label><strong>Location: </strong></label>
-		<!-- <label for"location>Rubies Plaza</label>
-		<input id="location" type="radio" value="120" required>
-		<label for"location>601 Westbury</label>
-		<input id="location" type="radio" value="120" required> -->
+		
 		<select name="location" onchange="if(this.options[this.selectedIndex].value=='otherOption'){
               toggleField(this,this.nextSibling);
               this.selectedIndex='0';}" required>
@@ -127,9 +121,14 @@ function toggleField(hideObj,showObj){
 
 		<input type="submit" value="Submit">
 	</div>
+	<!-- <div>
+		<label class="label">
+            <div class="field">Email:</div></br>
+            <input type="text" name="user" />
+  </label>
+</div> -->
+</label>
 </form>
-	
-
-	
+		
 </body>
 </html>
