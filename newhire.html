@@ -4,16 +4,25 @@
 	<title>Rubies New Hire Form</title>
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
+<script>
+function toggleField(hideObj,showObj){
+  hideObj.disabled=true;        
+  hideObj.style.display='none';
+  showObj.disabled=false;   
+  showObj.style.display='inline';
+  showObj.focus();
+}
+</script>
 <body>
 
 <div id="header"><span id="firstWord">Rubies New</span><span id="secondWord"> Hire Form</span><img src=img/index_logo.png width="35px" height="40px"><hr /></div>
 <br>
-<form>
+<form name="newHire" action="#">
 	<div class="listings">
 		<label for="fName"><strong>First Name</strong></label>
-		<input name="firstName" id="fName" type="text" required>
+		<input name="firstName" id="fName" type="text" required autocomplete="off">
 		<label for="fName"><strong>Last Name<strong></label>
-		<input name="LastName" id="lName" type="text" required>
+		<input name="LastName" id="lName" type="text" required autocomplete="off">
 	</div>
 	<br>
 	<div class="listings">
@@ -32,7 +41,10 @@
 		<input id="location" type="radio" value="120" required>
 		<label for"location>601 Westbury</label>
 		<input id="location" type="radio" value="120" required> -->
-		<select name="location" required>
+		<select name="location" onchange="if(this.options[this.selectedIndex].value=='otherOption'){
+              toggleField(this,this.nextSibling);
+              this.selectedIndex='0';}" required>
+
 			<option value="" disabled selected hidden>Select a Location</option>
 			<option value="120">Rubies Plaza</option>
 			<option value="601">601 Westbury</option>
@@ -46,7 +58,10 @@
 			<option value="phx2">Phoenix 59th</option>
 			<option value="sd">San Diego</option>
 			<option value="char">Charades</option>
+			<option value="otherOption">Other</option>
 		</select>
+		<input name="location" style="display:none;" disabled="disabled" 
+            onblur="if(this.value==''){toggleField(this,this.previousSibling);}">
 		<label class="req"> *</label>
 	</div>
 	<br>
@@ -93,14 +108,23 @@
 	
 		<label><strong>Sendsuite Access:</strong></label>
 		<label for="pitneyNeeded">Yes</label>
-		<input name ="checkpitney" id="pitneyNeeded" type="radio" required value="pitneyIrms">
+		<input name ="checkpitney" id="pitneyNeeded" type="radio" required value="yesPitney">
 		<label for="pitneyNeeded">No</label>
-		<input name="checkpitney" id="pitneyNeeded" type="radio" value="pitneyIrms">
+		<input name="checkpitney" id="pitneyNeeded" type="radio" value="yesPitney">
 		<label class="req"> *</label>
 	</div>
 	<br>
 	<div class="listings">
-		<textarea name="comments" rows="10" cols="50">Additional Notes/Requests</textarea>
+		<textarea name="comments" rows="10" cols="50" placeholder="Additional Notes/Requests"></textarea>
+	</div>
+	
+	<div class="req">
+		* denotes required field
+	</div>
+	<br>
+	<div>
+
+		<input type="submit" value="Submit">
 	</div>
 </form>
 	
