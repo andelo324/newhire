@@ -4,7 +4,10 @@ html {
 	padding: 0;
 	}
 body { 
-	font: 75% georgia, sans-serif;
+	/*font: 75% georgia, sans-serif;*/
+	font-family: 'Raleway', sans-serif;
+	/*font-family: 'Noto Serif', sans-serif;*/
+	font: 75%;
 	line-height: 1.88889;
 	color: #555753; 
 	background: url(../img/grey_bg.jpg);
@@ -18,7 +21,10 @@ p {
 	}
 
 h1 { 
-	font: 30px georgia, sans-serif;
+	/*font: 30px georgia, sans-serif;*/
+	font-family: 'Raleway', sans-serif;
+	font: 30px;
+	/*font-family: 30px 'Noto Serif', sans-serif;*/
 	letter-spacing: 1px; 
 	margin-bottom: 0; 
 	color: #7D775C;
@@ -55,12 +61,22 @@ abbr {
 
 	/* Special listings */
 
+/*	.sticky {
+		position: fixed;
+		top: 0;
+		width: 100%;
+	}*/
+
+/*	.sticky + .content {
+  padding-top: 102px;
+}*/
+
 .listings{
-	font: 14px verdana, sans-serif;
+	font: 'Raleway', sans-serif;
 }
 
 .req {
-	font: 14px verdana, sans-serif;
+	font: 14px 'verdana', sans-serif;
 	color: red;
 }
 
@@ -69,4 +85,14 @@ abbr {
 }
 .nameInput{
 	display:block;
+}
+
+.submit {
+	width: 100px;
+	height: 100px;
+}
+.form-control-inline {
+    min-width: 0;
+    width: auto;
+    display: inline;
 }

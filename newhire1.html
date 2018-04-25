@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Rubies New Hire Form</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link href="https://fonts.googleapis.com/css?family=Noto+Serif:400,700|Raleway:400,700" rel="stylesheet">
+
+	<script>
+	function toggleField(hideObj,showObj){
+	  hideObj.disabled=true;        
+	  hideObj.style.display='none';
+	  showObj.disabled=false;   
+	  showObj.style.display='inline';
+	  showObj.focus();
+	}
+	
+	</script>
+		<script type="text/javascript">
+				$(function () {
+            $('#datetimepicker').datetimepicker({
+            minDate : moment()
+            });
+        });
+		</script>
+<body>
+	<div class="container-fluid">
+		<div class=navbar-header id="myHeader">
+			<a class="navbar-brand" href="http://www.rubieshelp.com"><img alt="Brand" src="img/index_logo.png" width="40px" height="40px"></a>
+			<span id="firstWord">Rubies New</span><span id="secondWord"> Hire Form</span>
+		</div>
+	</div>
+	<hr />
+	<br>
+	<form name=newHire action="#">
+				<div class="form-group">
+							<label for="fName"><strong>First Name:</strong></label>
+								<input name="firstName" id="fName" class="form-control-inline" type="text" required autocomplete="off" placeholder="FirstName">
+							<label for="lName"><strong>Last Name:</strong></label>
+								<input name="lastName" id="lName" class="form-control-inline" type="text" required autocomplete="off" placeholder="LastName">
+				</div>
+				<!-- <br> -->
+				<div class="form-group">
+					<div class="input-group date" id="datetimepicker">
+							<label for="sDate"><strong>Start Date:</strong></label>
+							<input id="datetimepicker" class="form-control-line" type="text" required name="sDate" class="glyphicon-calendar glyphicon">
+							<!-- <span class="input-group-addon"><span ></span></span> -->
+
+							<label class="req">*</label>
+					</div>
+				</div>
+				<!-- <br> -->
+				<div class="form-group"
+							<label><strong>Location: </strong></label>
+							<select name="location" class="form-control-inline" onchange="if(this.options[this.selectedIndex].value=='otherOption'){
+			              toggleField(this,this.nextSibling);
+			              this.selectedIndex='0';}" required>
+									<option value="" disabled selected hidden>Select a Location</option>
+									<option value="120">Rubies Plaza</option>
+									<option value="601">601 Westbury</option>
+									<option value="650">650 Westbury</option>
+									<option value="540">540 Melville</option>
+									<option value="1770">1770 Melville</option>
+									<option value="bay1">Bayshore 1</option>
+									<option value="bay2">Bayshore 2</option>
+									<option value="sc">South Carolina</option>
+									<option value="phx1">Phoenix - LowerBuckeye</option>
+									<option value="phx2">Phoenix 59th</option>
+									<option value="sd">San Diego</option>
+									<option value="char">Charades</option>
+									<option value="otherOption">Other</option>
+							<input name="location" style="display:none;" disabled="disabled" 
+	            onblur="if(this.value==''){toggleField(this,this.previousSibling);}">
+	    				</select>
+							<label class="req"> *</label>
+					</div>
+					<!-- <br> -->
+				<div class="form-group">
+						<label for="dept"><strong>Dept:</strong></label>
+						<input id="dept" class="form-control-inline" type="text" class="form-control" name="dept">
+				</div>
+				
+				<div class="form-group">
+					<label><strong>Simparel Access:</strong></label>
+					<label for="simpNeeded">Yes</label>
+					<input name ="checksimp" id="simpNeeded" class="form-control-inline" type="radio" required value="yesSimp">
+					<label for="simpNeeded">No</label>
+					<input name="checksimp" id="simpNeeded" class="form-control-inline" type="radio" value="noSimp">
+					<label class="req">  *</label>
+				</div>
+				<div class="form-group">
+					<label class="form-control-inline"><strong>Simparel Companies:</strong></label> 
+					<label class="form-control-inline" for="SimpRub">
+						<input id="SimpRub" type="checkbox" name="SimpRub" class="checkbox-inline"> Rubies US
+					</label>
+					
+					<label class="form-control-inline" for="SimpREL">
+						<input id="SimpREL" type="checkbox" name="SimpREL" class="checkbox-inline"> Rubies REL
+					</label>
+					
+					<label class="form-control-inline" for="SimpDIA">
+						<input id="SimpDIA" type="checkbox" name="SimpDIA" class="checkbox-inline"> Rubies DIA
+					</label>
+
+					<label class="form-control-inline" for="SimpFor">
+						<input id="SimpFor" type="checkbox" name="SimpFor" class="checkbox-inline"> Forum
+					</label>
+					
+					<label class="form-control-inline" for="SimpUK">
+						<input id="SimpUK" type="checkbox" name="SimpUK" class="checkbox-inline"> Rubies UK
+					</label>
+
+					<label class="form-control-inline" for="SimpCAN">
+						<input id="SimpCAN" type="checkbox" name="SimpCAN" class="checkbox-inline"> Rubies CAN
+					</label>
+				</div>	
+				<div class="form-group">
+					<label><strong>Irms Access:</strong></label>
+					<label for="irmsNeeded">Yes</label>
+					<input name ="checkirms" id="irmsNeeded" class="form-control-inline" type="radio" required value="yesIrms">
+					<label for="irmsNeeded">No</label>
+					<input name="checkirms" id="irmsNeeded" class="form-control-inline" type="radio" value="noIrms">
+					<label class="req"> *</label>
+				</div>
+				<div class="listings">
+					<textarea name="comments"  rows="5" cols="50" placeholder="Additional Notes/Requests"></textarea>
+				</div>
+	
+	<div class="req">
+		* denotes required field
+	</div>
+	<div>
+		<input class="btn btn-primary" type="submit" value="Submit">
+	</div>
+
+	</form>
+
+	<br/>
+<!-- <div class="row">
+    <div class="col-md-12">
+         <h6>Datetimepicker</h6>
+
+        <div class="form-group">
+            <div class="input-group date" id="datetimepicker">
+                <input size="16" type="text" class="form-control"><span class="input-group-addon"><i class="glyphicon-calendar glyphicon"></i></span>
+            </div>
+        </div>
+</div> -->
+<div class="input-append date form_datetime">
+    <input size="16" type="text" value="" readonly>
+    <span class="add-on"><i class="icon-th"></i></span>
+</div>
+ 
+<script type="text/javascript">
+    $(".form_datetime").datetimepicker({
+        format: "dd MM yyyy - hh:ii"
+    });
+</script>     
+
+
+		<script>
+		window.onscroll = function() {myFunction()};
+
+		var header = document.getElementById("myHeader");
+		var sticky = header.offsetTop;
+
+		function myFunction() {
+		  if (window.pageYOffset >= sticky) {
+		    header.classList.add("sticky");
+		  } else {
+		    header.classList.remove("sticky");
+		  }
+		}
+	
+		</script>
+	
+
+	
+
+</body>
+</html>
