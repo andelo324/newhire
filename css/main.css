@@ -20,15 +20,17 @@ p {
 	text-align: justify;
 	}
 
-h1 { 
-	/*font: 30px georgia, sans-serif;*/
+
+/*h1 { 
+
 	font-family: 'Raleway', sans-serif;
 	font: 30px;
-	/*font-family: 30px 'Noto Serif', sans-serif;*/
+
 	letter-spacing: 1px; 
 	margin-bottom: 0; 
 	color: #7D775C;
 	}
+	*/
 a:link { 
 	font-weight: bold; 
 	text-decoration: none; 
@@ -71,6 +73,7 @@ abbr {
   padding-top: 102px;
 }*/
 
+
 .listings{
 	font: 'Raleway', sans-serif;
 }
@@ -95,4 +98,26 @@ abbr {
     min-width: 0;
     width: auto;
     display: inline;
+}
+
+/*.reveal-if-active {
+
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transform: scale(0.8);
+  transition: 0.5s;*/
+
+
+/*  input[type="radio"]:checked + p{
+    opacity: 1;
+    max-height: 100px;
+    overflow: visible;
+    padding: 10px 20px;
+    transform: scale(1);
+  }
+}
+*/
+.buttons {
+    display: none;
 }

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Rubies New Hire Form</title>
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link href="https://fonts.googleapis.com/css?family=Noto+Serif:400,700|Raleway:400,700" rel="stylesheet">
+</head>
+<script>
+function toggleField(hideObj,showObj){
+  hideObj.disabled=true;        
+  hideObj.style.display='none';
+  showObj.disabled=false;   
+  showObj.style.display='inline';
+  showObj.focus();
+}
+
+
+</script>
+<body>
+
+<div id="myHeader"><span id="firstWord">Rubies New</span><span id="secondWord"> Hire Form</span><img src=img/index_logo.png width="35px" height="40px"><hr /></div>
+<br>
+<form name="newHire" action="#">
+
+	<div class="listings">
+		<label for="fName"><strong>First Name</strong></label>
+			<input name="firstName" id="fName" type="text" required autocomplete="off">
+		<label for="fName"><strong>Last Name</strong></label>
+			<input name="LastName" id="lName" type="text" required autocomplete="off">
+	</div>
+	<br>
+	<div class="listings">
+		<label for="sDate"><strong>Start Date</strong></label>
+		<input id="sDate" type="date" required>
+		<label class="req"> *</label>
+	</div>
+	<br>
+	
+	<div class="listings">
+		<label><strong>Location: </strong></label>
+		
+		<select name="location" onchange="if(this.options[this.selectedIndex].value=='otherOption'){
+              toggleField(this,this.nextSibling);
+              this.selectedIndex='0';}" required>
+
+			<option value="" disabled selected hidden>Select a Location</option>
+			<option value="120">Rubies Plaza</option>
+			<option value="601">601 Westbury</option>
+			<option value="650">650 Westbury</option>
+			<option value="540">540 Melville</option>
+			<option value="1770">1770 Melville</option>
+			<option value="bay1">Bayshore 1</option>
+			<option value="bay2">Bayshore 2</option>
+			<option value="sc">South Carolina</option>
+			<option value="phx1">Phoenix - LowerBuckeye</option>
+			<option value="phx2">Phoenix 59th</option>
+			<option value="sd">San Diego</option>
+			<option value="char">Charades</option>
+			<option value="otherOption">Other</option>
+		
+		<input name="location" style="display:none;" disabled="disabled" 
+            onblur="if(this.value==''){toggleField(this,this.previousSibling);}">
+    </select>
+		<label class="req"> *</label>
+	</div>
+	<br>
+	<div class="listings">
+		<label for="dept"><strong>Dept:</strong></label>
+		<input id="dept" type="text">
+	</div>
+	<br>
+	<div class="listings">
+		<label><strong>Simparel Access:</strong></label>
+		<label for="simpNeeded">Yes</label>
+		<input name ="checksimp" id="simpNeeded" type="radio" required value="yesSimp">
+		<label for="simpNeeded">No</label>
+		<input name="checksimp" id="simpNeeded" type="radio" value="noSimp">
+		<label class="req">  *</label>
+	</div>
+	<br>
+	<div class="listings">
+		<label><strong>Simparel Companies:</strong></label> 
+		<label for="SimpRub">Rubies US</label>
+		<input id="SimpRub" type="checkbox">
+		<label for="SimpREL">Rubies REL</label>
+		<input id="SimpREL" type="checkbox">
+		<label for="SimpDIA">Rubies DIA</label>
+		<input id="SimpDIA" type="checkbox">
+		<label for="SimpFor">Forum</label>
+		<input id="SimpFor" type="checkbox">
+		<label for="SimpUK">Rubies UK</label>
+		<input id="SimpUK" type="checkbox">
+		<label for="SimpCAN">Rubies CAN</label>
+		<input id="SimpCAN" type="checkbox">
+	</div>	
+	<br>
+	<div class="listings">
+		<label><strong>Irms Access:</strong></label>
+		<label for="irmsNeeded">Yes</label>
+		<input name ="checkirms" id="irmsNeeded" type="radio" required value="yesIrms">
+		<label for="irmsNeeded">No</label>
+		<input name="checkirms" id="irmsNeeded" type="radio" value="noIrms">
+		<label class="req"> *</label>
+	</div>
+	<br>
+	<div class="listings">
+	
+		<label><strong>Sendsuite Access:</strong></label>
+		<label for="pitneyNeeded">Yes</label>
+		<input name ="checkpitney" id="pitneyNeeded" type="radio" required value="yesPitney">
+		<label for="pitneyNeeded">No</label>
+		<input name="checkpitney" id="pitneyNeeded" type="radio" value="yesPitney">
+		<label class="req"> *</label>
+	</div>
+	<br>
+	<div class="listings">
+		<textarea name="comments" rows="10" cols="50" placeholder="Additional Notes/Requests"></textarea>
+	</div>
+	
+	<div class="req">
+		* denotes required field
+	</div>
+	<br>
+	<div>
+
+		<input class="submit" type="submit" value="Submit">
+	</div>
+	<!-- <div>
+		<label class="label">
+            <div class="field">Email:</div></br>
+            <input type="text" name="user" />
+  </label>
+</div> -->
+</label>
+</form>
+
+<script>
+window.onscroll = function() {myFunction()};
+
+var header = document.getElementById("myHeader");
+var sticky = header.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    header.classList.add("sticky");
+  } else {
+    header.classList.remove("sticky");
+  }
+}
+</script>
+		
+</body>
+</html>
