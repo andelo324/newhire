@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Rubies New Hire Form</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" type="text/css" href="css/datepicker.css">
+	<script type="text/javascript" href="js/bootstrap.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>
+	<link href="https://fonts.googleapis.com/css?family=Noto+Serif:400,700|Raleway:400,700" rel="stylesheet">
+	<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
+
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#pickyDate').datepicker({
+            
+            format: "mm/dd/yyyy",
+            startDate: new Date(),
+            autoclose: true,
+            icons: {
+				        date: 'icon icon-calendar',
+				        previous: 'icon icon-arrow-small-left',
+				        next: 'icon icon-arrow-small-right',
+				        today: 'glyphicon glyphicon-screenshot',
+				        clear: 'glyphicon glyphicon-trash'
+    								}
+
+        });
+    });
+</script>
+
+<script>
+
+function simpNeeded() {
+	document.getElementById('simpbox').style.display='block';
+}
+
+function nosimpNeeded() {
+	document.getElementById('simpbox').style.display='none';
+}
+
+</script>
+
+
+	<script>
+	function toggleField(hideObj,showObj){
+	  hideObj.disabled=true;        
+	  hideObj.style.display='none';
+	  showObj.disabled=false;   
+	  showObj.style.display='inline';
+	  showObj.focus();
+	}
+	</script>
+	
+</head>	
+
+
+<body>
+	<div class="container">
+		<div class=navbar-header id="myHeader">
+			<div class="navbar-brand">
+			<a  href="http://www.rubieshelp.com"><img alt="Brand" src="img/index_logo.png" width="40px" height="40px"></a>
+			<span  class="navbar-text" id="firstWord">Rubie's Costume Co</span><span  class="navbar-text" id="secondWord">New Hire Form</span>
+		</div>
+	</div>
+	</div>
+	<hr />
+	<br>
+
+
+	<div class="container">
+		<form class="form-horizontal" name=newHire  id="new_hire">
+					<!-- First name Input -->
+					<div class="clear-fix">
+						<div class="col-xs-12">
+							<div class="form-group">
+										<label class="col-md-2 control-label" for="fName"><strong>First Name:</strong></label>
+										<div class="col-md-4 inputGroupContainer">
+											<div class="input-group"> <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+												<input name="firstName" id="fName" class="form-control" type="text" required autocomplete="off" placeholder="FirstName">
+											</div>
+										</div>
+							</div>
+						</div>
+					</div>
+					<!-- Last Name Input -->
+					<div class="clear-fix">
+						<div class="col-xs-12">
+							<div class="form-group">
+										<label class="col-md-2 control-label" for="lName"><strong>Last Name:</strong></label>
+										<div class="col-md-4 inputGroupContainer">
+											<div class="input-group"> <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+												<input name="lastName" id="lName" class="form-control" type="text" required autocomplete="off" placeholder="LastName">
+											</div>
+										</div>
+							</div>
+						</div>
+					</div>
+					<!-- Starting Date -->
+					<div class="clear-fix">
+						<div class="col-xs-12">
+							<div class="form-group">
+								
+										<label class="col-md-2 control-label" for="sDate"><strong>Start Date:</strong></label>
+										<div class="col-md-4 inputGroupContainer">
+											<div class="input-group date form_date"> <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+											<input id="pickyDate" class="form-control" type="text" required name="sDate" >
+											</div>								
+										</div>
+								</div>
+							</div>
+						</div>
+					
+					
+
+
+
+
+					<!-- Office location -->
+					
+					<div class="clear-fix">
+						<div class="col-xs-12">
+							<div class="form-group">
+								<label class="col-md-2 control-label"><strong>Location:</strong></label>
+									<div class="col-md-4 SelectContainer">
+										<div class="input-group"> <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+										
+										<select name="location" class="form-control selectpicker" onchange="if(this.options[this.selectedIndex].value=='otherOption'){
+						              toggleField(this,this.nextSibling);
+						              this.selectedIndex='0';}" required>
+												<option value="" disabled selected hidden>Select a Location</option>
+												<option value="120">Rubies Plaza</option>
+												<option value="601">601 Westbury</option>
+												<option value="650">650 Westbury</option>
+												<option value="540">540 Melville</option>
+												<option value="1770">1770 Melville</option>
+												<option value="bay1">Bayshore 1</option>
+												<option value="bay2">Bayshore 2</option>
+												<option value="sc">South Carolina</option>
+												<option value="phx1">Phoenix - LowerBuckeye</option>
+												<option value="phx2">Phoenix 59th</option>
+												<option value="sd">San Diego</option>
+												<option value="char">Charades</option>
+												<option value="otherOption">Other</option>
+										<input name="location" style="display:none;" disabled="disabled" 
+				            onblur="if(this.value==''){toggleField(this,this.previousSibling);}">
+				    				</select>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+
+					<!-- Optional Department Input -->
+					<div class="clear-fix">
+						<div class="col-xs-12">
+							<div class="form-group">
+								<label class="col-md-2 control-label"><strong>Dept:</strong></label>
+									<div class="col-md-4 inputGroupContainer">	
+										<div class="input-group"> <span class="input-group-addon"><i class="glyphicon glyphicon-modal-window"></i></span>
+											<input id="dept" class="form-control" type="text" class="form-control" name="dept">
+										</div>
+									</div>
+							</div>	
+						</div>
+					</div>	
+			<!-- Simparel Access -->
+					<div class="clear-fix">
+						<div class="col-xs-12">
+							<div class="form-group">	
+								<label class="col-md-2 control-label"><strong>Simparel Access:</strong></label>
+									<div class="col-md-4 container">
+										<label class="col-md-2 radio-inline" for="simpNeeded">
+
+											<input name ="checksimp" onclick="simpNeeded();" type="radio" required value="1" />Yes
+										</label>
+										
+										<label class="col-md-2 radio-inline" for="simpNeeded">
+											<input name ="checksimp" onclick="nosimpNeeded();" type="radio" value="0" />No 
+										</label>
+										
+									</div>
+							</div>
+						</div>
+					</div>
+<!-- If Yes selected, Simparel Companies appear -->
+											<div class="clear-fix buttons" id="simpbox">
+													<div class="col-xs-12" >
+														<div class="form-group">
+															<label class="col-md-2 control-label"><strong>Simparel Companies:</strong></label>
+																<div class="col-md-4 container"> 
+																		<label class="form-control-inline" for="SimpRub">
+																			<input id="SimpRub" type="checkbox" name="simplist[]" value="SimpRub" class="checkbox-inline"> Rubies US
+																		</label>
+																		
+																		<label class="form-control-inline" for="SimpREL">
+																			<input id="SimpREL" type="checkbox" name="simplist[]" value="SimpREL" class="checkbox-inline"> Rubies REL
+																		</label>
+																		
+																		<label class="form-control-inline" for="SimpDIA">
+																			<input id="SimpDIA" type="checkbox" name="simplist[]" value="SimpDIA" class="checkbox-inline"> Rubies DIA
+																		</label>
+
+																		<label class="form-control-inline" for="SimpFor">
+																			<input id="SimpFor" type="checkbox" name="simplist[]" value="SimpFor" class="checkbox-inline"> Forum
+																		</label>
+																		
+																		<label class="form-control-inline" for="SimpUK">
+																			<input id="SimpUK" type="checkbox" name="simplist[]" value="SimpUK" class="checkbox-inline"> Rubies UK
+																		</label>
+
+																		<label class="form-control-inline" for="SimpCAN">
+																			<input id="SimpCAN" type="checkbox" name="simplist[]" value="SimpCAN" class="checkbox-inline"> Rubies CAN
+																		</label>
+																</div>
+														</div>
+													</div>
+												</div>
+
+					<!-- Irms Access -->
+					<div class="clear-fix">
+						<div class="col-xs-12">
+								<div class="form-group">
+											<label class="col-md-2 control-label"><strong>IRMS Access:</strong></label>
+												<div class="col-md-4 container">
+													<label class="col-md-2 radio-inline" for="irmsNeeded">
+														<input name ="checkirms" id="irmsNeeded" type="radio" required value="yesIrms">Yes
+													</label>
+											
+													<label class="col-md-2 radio-inline" for="irmsNeeded">
+														<input name="checkirms" id="irmsNeeded" type="radio" value="noIrms">No
+													</label>
+											</div>
+								</div>
+						</div>
+					</div>
+					<div class="clear-fix">
+						<div class="col-xs-12">
+							<div class="listings form-group">
+								<label class="col-md-2 control-label"></label>
+								<div class="col-md4 container">
+											<textarea name="comments"  rows="5" cols="50" placeholder="Additional Notes/Requests"></textarea>
+								</div>
+							</div>
+						</div>
+					</div>
+		
+	<!-- 	<div class="req">
+			* denotes required field
+		</div>
+		<div> -->
+			<div class="clear-fix">
+						<div class="col-xs-12">
+							<div class="form-group">
+								<label class="col-md-2 control-label"></label>
+									<input class="btn btn-primary" type="submit" value="Submit">
+							</div>
+						</div>
+			</div>	
+
+		</form>
+
+
+</body>
+</html>
